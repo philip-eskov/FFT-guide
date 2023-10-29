@@ -2,10 +2,10 @@
 
 ## Theory 
 
-### 1) Intoduction
+### 1) Introduction
  
 - Motivation 
-- Prerequsite knowledge
+- Prerequisite knowledge
 	- Complex numbers 
 	- Basic (MAT1100) calculus 
 	- Properties of sines and cosines
@@ -15,24 +15,24 @@
 
 ### 2) What is frequency domain? 
 
-- Intutitve explenation 
+- Intuitive explanation 
 - Give some motivational examples
 	- Sound from a piano chord over time (easy to grasp)
 	- Frequency components of EM wave (relevant to physics / chemistry(?))
 
-### 3) The Fourier transfrom 
+### 3) The Fourier transform  
 
 - Mathematical definition 
-- Focus on intution 
+- Focus on intuition 
 - Explain information of complex values 
 	- Abs = frequency response
 	- imaginary part needed for phase response 
 
 ### 4) The discrete Fourier transform (DFT) 
 
-- Why do we need to use the DFT and not the continious Fourier transform? 
+- Why do we need to use the DFT and not the continuous Fourier transform? 
 - Mathematical definition
-	- Explain changes in expression from contninous to discrete
+	- Explain changes in expression from continuous to discrete
 - Some words on the FFT 
 
 ### 5) Sampling frequency and aliasing 
@@ -57,7 +57,7 @@
 	- sp.fft.fftfreq and why the parameters are chosen in they way that they are 
 - Taking the FFT 
 	- sp.fft.fft 
-	- Normalising the absolute value
+	- Normalizing the absolute value
 
 - Plotting
 	- Limiting the x-axis (negative frequencies are weird) 
