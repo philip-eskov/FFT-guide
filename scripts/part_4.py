@@ -33,3 +33,29 @@ ylabel = plt.ylabel("Amplitude")
 plt.legend()
 plt.savefig("guide_sections/plots/p4_samp.png")
 plt.clf()
+
+
+# =======Sampling:========
+
+t = np.linspace(0, 10, 1000) 
+sinus = np.sin(t)
+
+plt.title("Sinusfunksjon (f(t))")
+plt.plot(t, sinus, label="f(t)")
+xlabel = plt.xlabel("t")
+ylabel = plt.ylabel("Amplitude")
+plt.legend()
+plt.savefig("guide_sections/plots/p4_sine.png")
+plt.clf()
+
+
+t = np.linspace(0, 10, 3) 
+sinus = np.sin(t)
+
+plt.title("Sinusfunksjon (f(t)), undersamplet")
+plt.plot(t, sinus, label="f(t)")
+xlabel = plt.xlabel("t")
+ylabel = plt.ylabel("Amplitude")
+plt.legend()
+plt.savefig("guide_sections/plots/p4_sine_usamp.png")
+plt.clf()
