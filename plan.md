@@ -28,31 +28,29 @@
 	- Abs = frequency response
 	- imaginary part needed for phase response 
 
-### 4) The discrete Fourier transform (DFT) 
+### 4) The discrete Fourier transform (DFT) / Sampling frequency and aliasing 
 
 - Why do we need to use the DFT and not the continuous Fourier transform? 
 - Mathematical definition
 	- Explain changes in expression from continuous to discrete
 - Some words on the FFT 
-
-### 5) Sampling frequency and aliasing 
 - Nyq. limit / frequency 
 - What is aliasing 
 
-### 6) (optional) Why does aliasing occur? 
+### 5) (optional) Why does aliasing occur? 
 - Introduce Ш function 
 - Bigger in sampling period in TD (wider Ш) = tighter Ш in FD = closer spaced aliases 
 
 ## Implementing the FFT in Python 
 
-### 7) Scipy, numpy and matplotlib 
+### 6) Scipy, numpy and matplotlib 
 
-### 8) Relevant constants
+### 7) Relevant constants
  
 - Sampling rate
 - N samples 
 
-### 9) Taking the FFT 
+### 8) Taking the FFT 
 - Defining the x-axis of frequency domain 
 	- sp.fft.fftfreq and why the parameters are chosen in they way that they are 
 - Taking the FFT 
