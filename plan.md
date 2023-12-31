@@ -37,25 +37,22 @@
 - Nyq. limit / frequency 
 - What is aliasing 
 
-### 5) (optional) Why does aliasing occur? 
-- Introduce Ш function 
-- Bigger in sampling period in TD (wider Ш) = tighter Ш in FD = closer spaced aliases 
+### 5) Implementing the FFT in Python
+- Prerequisites
+	- Scipy, numpy and matplotlib imports 
+	- Relevant constants
+	- Sampling rate
+	- N samples 
 
-## Implementing the FFT in Python 
-
-### 6) Scipy, numpy and matplotlib 
-
-### 7) Relevant constants
- 
-- Sampling rate
-- N samples 
-
-### 8) Taking the FFT 
-- Defining the x-axis of frequency domain 
-	- sp.fft.fftfreq and why the parameters are chosen in they way that they are 
 - Taking the FFT 
-	- sp.fft.fft 
-	- Normalizing the absolute value
+	- Defining the x-axis of frequency domain 
+		- sp.fft.fftfreq and why the parameters are chosen in they way that they are 
+	- Taking the FFT 
+		- sp.fft.fft 
+		- Normalizing the absolute value
+	- Plotting
+		- Limiting the x-axis (negative frequencies are weird) 
 
-- Plotting
-	- Limiting the x-axis (negative frequencies are weird) 
+### 6) Further reading / resources
+
+### 7) Glossary 
