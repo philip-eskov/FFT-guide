@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 
 start = 0
 end = 5
-N = 100000
+N = 1000000
 t = np.linspace(start, end, N)
 fs = N / (end - start)
 
@@ -49,7 +49,7 @@ plt.clf()
 fft_1 = 2 * abs(sp.fft.fft(sig_1)) / N
 fft_1_freqs = sp.fft.fftfreq(N, 1 / fs)
 
-plt.plot(fft_1_freqs, fft_1, label="Signal 1, Frekvensdomene")
+plt.stem(fft_1_freqs, fft_1, label="Signal 1, Frekvensdomene", basefmt=" ")
 plt.xlim(0, 5)
 plt.grid()
 plt.title("f(t), frekvensdomene")
@@ -75,7 +75,7 @@ plt.clf()
 fft_2 = 2 * abs(sp.fft.fft(sig_2)) / N
 fft_2_freqs = sp.fft.fftfreq(N, 1 / fs)
 
-plt.plot(fft_2_freqs, fft_2, label="Signal 2, Frekvensdomene")
+plt.stem(fft_2_freqs, fft_2, label="Signal 2, Frekvensdomene", basefmt=" ")
 plt.xlim(0, 5)
 plt.grid()
 plt.title("g(t), frekvensdomene")
@@ -104,7 +104,7 @@ plt.clf()
 fft_1a2 = 2 * abs(sp.fft.fft(sig_1a2)) / N
 fft_1a2_freqs = sp.fft.fftfreq(N, 1 / fs)
 
-plt.plot(fft_1a2_freqs, fft_1a2, label="Signal 1 + 2, Frekvensdomene")
+plt.stem(fft_1a2_freqs, fft_1a2, label="Signal 1 + 2, Frekvensdomene", basefmt=" ")
 plt.xlim(0, 5)
 plt.grid()
 plt.title("h(t), frekvensdomene")
