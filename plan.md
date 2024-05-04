@@ -53,6 +53,8 @@
 	- Plotting
 		- Limiting the x-axis (negative frequencies are weird) 
 
-### 6) Further reading / resources
+### 6) FAQ
+
+### 7) Further reading
 
 ### 7) Glossary 
