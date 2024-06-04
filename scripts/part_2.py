@@ -33,12 +33,10 @@ sig_1a2 = sig_1 + sig_2
 
 # Signal 1:
 
-plt.plot(t, sig_1, label="Signal 1")
-plt.grid()
+plt.plot(t, sig_1, "black")
 plt.title("f(t)")
 plt.xlabel("Tid (s)")
 plt.ylabel("Amplitude")
-plt.grid()
 
 plt.savefig("guide_sections/plots/p2_signal_1.png")
 plt.clf()
@@ -46,54 +44,40 @@ plt.clf()
 
 # Frequency domain, signal 1:
 
-fft_1 = 2 * abs(sp.fft.fft(sig_1)) / N
-fft_1_freqs = sp.fft.fftfreq(N, 1 / fs)
-
-plt.stem(fft_1_freqs, fft_1, label="Signal 1, Frekvensdomene", basefmt=" ")
+plt.stem(f_1, A_1, "black", basefmt=" ")
 plt.xlim(0, 5)
-plt.grid()
-plt.title("f(t), frekvensdomene")
+plt.title("f(t), frekvensspekter")
 plt.xlabel("Frekvens (Hz)")
 plt.ylabel("Amplitude")
 
 plt.savefig("guide_sections/plots/p2_signal_1_FFT.png")
 plt.clf()
 
-
 # Signal 2:
 
-plt.plot(t, sig_2, label="Signal 2")
-plt.grid()
+plt.plot(t, sig_2, "black")
 plt.title("g(t)")
 plt.xlabel("Tid (s)")
 plt.ylabel("Amplitude")
-plt.grid()
 
 plt.savefig("guide_sections/plots/p2_signal_2.png")
 plt.clf()
 
-fft_2 = 2 * abs(sp.fft.fft(sig_2)) / N
-fft_2_freqs = sp.fft.fftfreq(N, 1 / fs)
-
-plt.stem(fft_2_freqs, fft_2, label="Signal 2, Frekvensdomene", basefmt=" ")
+plt.stem(f_2, A_2, "black", basefmt=" ")
 plt.xlim(0, 5)
-plt.grid()
-plt.title("g(t), frekvensdomene")
+plt.title("g(t), frekvensspekter")
 plt.xlabel("Frekvens (Hz)")
 plt.ylabel("Amplitude")
 
 plt.savefig("guide_sections/plots/p2_signal_2_FFT.png")
 plt.clf()
 
-
 # Signal 1 + 2:
 
-plt.plot(t, sig_1a2, label="Signal 1 and 2")
-plt.grid()
+plt.plot(t, sig_1a2, "black")
 plt.title("h(t)")
 plt.xlabel("Tid (s)")
 plt.ylabel("Amplitude")
-plt.grid()
 
 plt.savefig("guide_sections/plots/p2_signal_1a2.png")
 plt.clf()
@@ -104,10 +88,9 @@ plt.clf()
 fft_1a2 = 2 * abs(sp.fft.fft(sig_1a2)) / N
 fft_1a2_freqs = sp.fft.fftfreq(N, 1 / fs)
 
-plt.stem(fft_1a2_freqs, fft_1a2, label="Signal 1 + 2, Frekvensdomene", basefmt=" ")
+plt.stem([f_1, f_2], [A_1, A_2], "black", basefmt=" ")
 plt.xlim(0, 5)
-plt.grid()
-plt.title("h(t), frekvensdomene")
+plt.title("h(t), frekvensspekter")
 plt.xlabel("Frekvens (Hz)")
 plt.ylabel("Amplitude")
 
