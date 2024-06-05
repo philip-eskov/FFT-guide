@@ -1,4 +1,5 @@
 import numpy as np
+import scipy as sp
 import matplotlib.pyplot as plt
 
 # =======Visual rep. of sampling:========
@@ -49,4 +50,52 @@ xlabel = plt.xlabel("t")
 ylabel = plt.ylabel("Amplitude")
 plt.legend()
 plt.savefig("guide_sections/plots/p4_sine_usamp.png")
+plt.clf()
+
+# =======Spectral leakage========
+
+N = 10000
+t_full = np.linspace(0, 3, N)
+t_leak = np.linspace(0, 2.35, N)
+
+fs_full = N/3
+fs_leak = N/2.35
+
+sig_full = np.sin(2*np.pi*t_full) # 1 Hz
+sig_leak = np.sin(2*np.pi*t_leak)
+
+fft_full = abs(2*sp.fft.fft(sig_full)/N)
+fft_leak = abs(2*sp.fft.fft(sig_leak)/N)
+
+fft_freq_full = sp.fft.fftfreq(N, 1/fs_full)
+fft_freq_leak = sp.fft.fftfreq(N, 1/fs_leak)
+
+plt.plot(t_full, sig_full, "black")
+plt.xlabel("Tid (s)")
+plt.ylabel("Amplitude")
+plt.title("Sinus, 1 Hz, 0 til 3 sekunder")
+plt.savefig("guide_sections/plots/p4_sine_full.png")
+plt.clf()
+
+plt.plot(t_leak, sig_leak, "black")
+plt.xlabel("Tid (s)")
+plt.ylabel("Amplitude")
+plt.title("Sinus, 1 Hz, 0 til 2.35 sekunder")
+plt.savefig("guide_sections/plots/p4_sine_leak.png")
+plt.clf()
+
+plt.stem(fft_freq_full, fft_full, "black", basefmt=" ")
+plt.xlabel("Frekvens (Hz)")
+plt.ylabel("Amplitude")
+plt.title("Frekvensspekter, sinus, 1 Hz, 0 til 3 sekunder")
+plt.xlim(0, 3)
+plt.savefig("guide_sections/plots/p4_fft_full.png")
+plt.clf()
+
+plt.stem(fft_freq_leak, fft_leak, "black", basefmt=" ")
+plt.xlabel("Frekvens (Hz)")
+plt.ylabel("Amplitude")
+plt.title("Frekvensspekter, sinus, 1 Hz, 0 til 2.35 sekunder")
+plt.xlim(0, 3)
+plt.savefig("guide_sections/plots/p4_fft_leak.png")
 plt.clf()
