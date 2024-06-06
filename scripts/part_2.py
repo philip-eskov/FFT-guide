@@ -34,65 +34,25 @@ sig_1a2 = sig_1 + sig_2
 # Signal 1:
 
 plt.plot(t, sig_1, "black")
-plt.title("f(t)")
-plt.xlabel("Tid (s)")
-plt.ylabel("Amplitude")
+plt.axis("off")
 
 plt.savefig("guide_sections/plots/p2_signal_1.png")
-plt.clf()
-
-
-# Frequency domain, signal 1:
-
-plt.stem(f_1, A_1, "black", basefmt=" ")
-plt.xlim(0, 5)
-plt.title("f(t), frekvensspekter")
-plt.xlabel("Frekvens (Hz)")
-plt.ylabel("Amplitude")
-
-plt.savefig("guide_sections/plots/p2_signal_1_FFT.png")
 plt.clf()
 
 # Signal 2:
 
 plt.plot(t, sig_2, "black")
-plt.title("g(t)")
-plt.xlabel("Tid (s)")
-plt.ylabel("Amplitude")
+plt.axis("off")
+
 
 plt.savefig("guide_sections/plots/p2_signal_2.png")
-plt.clf()
-
-plt.stem(f_2, A_2, "black", basefmt=" ")
-plt.xlim(0, 5)
-plt.title("g(t), frekvensspekter")
-plt.xlabel("Frekvens (Hz)")
-plt.ylabel("Amplitude")
-
-plt.savefig("guide_sections/plots/p2_signal_2_FFT.png")
 plt.clf()
 
 # Signal 1 + 2:
 
 plt.plot(t, sig_1a2, "black")
-plt.title("h(t)")
-plt.xlabel("Tid (s)")
-plt.ylabel("Amplitude")
+plt.axis("off")
+
 
 plt.savefig("guide_sections/plots/p2_signal_1a2.png")
-plt.clf()
-
-
-# Frequency domain, signal 1 + 2:
-
-fft_1a2 = 2 * abs(sp.fft.fft(sig_1a2)) / N
-fft_1a2_freqs = sp.fft.fftfreq(N, 1 / fs)
-
-plt.stem([f_1, f_2], [A_1, A_2], "black", basefmt=" ")
-plt.xlim(0, 5)
-plt.title("h(t), frekvensspekter")
-plt.xlabel("Frekvens (Hz)")
-plt.ylabel("Amplitude")
-
-plt.savefig("guide_sections/plots/p2_signal_1a2_FFT.png")
 plt.clf()
